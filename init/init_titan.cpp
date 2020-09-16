@@ -37,7 +37,6 @@
 #include "property_service.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 void gsm_properties();
 
@@ -84,9 +83,9 @@ void vendor_load_properties()
         /* XT1063 */
         property_override("ro.build.description", "titan_retuglb-user 6.0 MPB24.65-34 31 release-keys");
         property_override("ro.build.product", "titan_umts");
-        property_set("ro.mot.build.customerid", "retusa_glb");
-        property_set("ro.telephony.default_network", "0");
-        property_set("persist.radio.multisim.config", "");
+        property_override("ro.mot.build.customerid", "retusa_glb");
+        property_override("ro.telephony.default_network", "0");
+        property_override("persist.radio.multisim.config", "");
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint", "motorola/titan_retuglb/titan_umts:6.0/MPB24.65-34/31:user/release-keys");
             set_ro_product_prop(source, "device", "titan_umts");
@@ -95,12 +94,12 @@ void vendor_load_properties()
         /*XT1068 */
         property_override("ro.build.description", "titan_retaildsds-user 6.0 MPB24.65-34 31 release-keys");
         property_override("ro.build.product", "titan_umtsds");
-        property_set("ro.mot.build.customerid", "retaildsdsall");
-        property_set("ro.telephony.default_network", "0,1");
-        property_set("ro.telephony.ril.config", "simactivation,sim2gsmonly");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.radio.dont_use_dsd", "true");
-        property_set("persist.radio.plmn_name_cmp", "1");
+        property_override("ro.mot.build.customerid", "retaildsdsall");
+        property_override("ro.telephony.default_network", "0,1");
+        property_override("ro.telephony.ril.config", "simactivation,sim2gsmonly");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("persist.radio.dont_use_dsd", "true");
+        property_override("persist.radio.plmn_name_cmp", "1");
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint", "motorola/titan_retaildsds/titan_umtsds:6.0/MPB24.65-34/31:user/release-keys");
             set_ro_product_prop(source, "device", "titan_umtsds");
@@ -109,9 +108,9 @@ void vendor_load_properties()
         /* XT1064 */
         property_override("ro.build.description", "titan_retuaws-user 6.0 MPB24.65-34 31 release-keys");
         property_override("ro.build.product", "titan_umts");
-        property_set("ro.mot.build.customerid", "retusa_aws");
-        property_set("ro.telephony.default_network", "0");
-        property_set("persist.radio.multisim.config", "");
+        property_override("ro.mot.build.customerid", "retusa_aws");
+        property_override("ro.telephony.default_network", "0");
+        property_override("persist.radio.multisim.config", "");
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint", "motorola/titan_retuaws/titan_umts:6.0/MPB24.65-34/31:user/release-keys");
             set_ro_product_prop(source, "device", "titan_umts");
@@ -120,12 +119,12 @@ void vendor_load_properties()
         /* XT1069 */
         property_override("ro.build.description", "titan_retbr_dstv-user 6.0 MPB24.65-34 31 release-keys");
         property_override("ro.build.product", "titan_udstv");
-        property_set("ro.mot.build.customerid", "retbr");
-        property_set("ro.telephony.default_network", "0,1");
-        property_set("ro.telephony.ril.config", "simactivation,sim2gsmonly");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.radio.dont_use_dsd", "true");
-        property_set("persist.radio.plmn_name_cmp", "1");
+        property_override("ro.mot.build.customerid", "retbr");
+        property_override("ro.telephony.default_network", "0,1");
+        property_override("ro.telephony.ril.config", "simactivation,sim2gsmonly");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("persist.radio.dont_use_dsd", "true");
+        property_override("persist.radio.plmn_name_cmp", "1");
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint", "motorola/titan_retbr_dstv/titan_udstv:6.0/MPB24.65-34/31:user/release-keys");
             set_ro_product_prop(source, "device", "titan_udstv");
@@ -133,5 +132,5 @@ void vendor_load_properties()
     }
 
     // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
+    property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
 }
