@@ -37,7 +37,6 @@
 #include "property_service.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 void gsm_properties();
 
