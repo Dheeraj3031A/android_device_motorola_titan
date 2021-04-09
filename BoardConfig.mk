@@ -45,4 +45,4 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 560070656
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/motorola/titan/BoardConfigVendor.mk
+include vendor/motorola/titan/BoardConfigVendor.mk
