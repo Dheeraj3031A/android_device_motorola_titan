@@ -35,6 +35,10 @@ $(call inherit-product, vendor/dolby/config.mk)
 PRODUCT_PACKAGES += \
     init.target.rc
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Sensors
 PRODUCT_PACKAGES += \
     sensord
