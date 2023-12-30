@@ -44,5 +44,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/motorola/msm8226-common/msm8226.mk)
 
 # GAPPS
-GAPPS_VARIANT := pico
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+$(call inherit-product, vendor/gapps/arm/arm-vendor.mk)
