@@ -17,18 +17,21 @@
 $(call inherit-product, device/motorola/titan/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := titan
-PRODUCT_RELEASE_NAME := titan
-PRODUCT_NAME := lineage_titan
+PRODUCT_NAME := qassa_titan
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := titan
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_SHIPPING_API_LEVEL := 19
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# QASSA
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := false
+TARGET_BOOT_ANIMATION_RES := 720

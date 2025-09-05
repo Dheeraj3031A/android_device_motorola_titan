@@ -1,0 +1,11 @@
+# Common Device Tree
+rm -rf device/motorola/msm8226-common
+git clone https://github.com/Dheeraj3031A/android_device_motorola_msm8226-common.git -b qassa device/motorola/msm8226-common --depth=1
+
+# Vendor Tree
+rm -rf vendor/motorola
+git clone https://github.com/Dheeraj3031A/proprietary_vendor_motorola.git -b lineage-17.1 vendor/motorola --depth=1
+
+# Kernel Tree
+rm -rf kernel/motorola/msm8226
+git clone https://github.com/Dheeraj3031A/android_kernel_motorola_msm8226.git -b lineage-17.0 kernel/motorola/msm8226 --depth=1
