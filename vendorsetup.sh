@@ -13,3 +13,7 @@ git clone https://github.com/Dheeraj3031A/android_kernel_motorola_msm8226.git -b
 # System/qcom
 rm -rf system/qcom
 git clone https://github.com/LineageOS/android_system_qcom.git -b lineage-17.1 system/qcom --depth=1
+
+# Dolby
+rm -rf vendor/dolby
+git clone https://github.com/TeraaBytee/vendor_dolby.git -b main vendor/dolby --depth=1
