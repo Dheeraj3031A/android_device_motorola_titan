@@ -9,3 +9,7 @@ git clone https://github.com/Dheeraj3031A/proprietary_vendor_motorola.git -b lin
 # Kernel Tree
 rm -rf kernel/motorola/msm8226
 git clone https://github.com/Dheeraj3031A/android_kernel_motorola_msm8226.git -b lineage-17.0 kernel/motorola/msm8226 --depth=1
+
+# Dolby
+rm -rf vendor/dolby
+git clone https://github.com/TeraaBytee/vendor_dolby.git -b main vendor/dolby --depth=1

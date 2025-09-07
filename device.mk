@@ -28,6 +28,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/vendor/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/vendor/etc/mixer_paths.xml
 
+# Dolby
+$(call inherit-product, vendor/dolby/config.mk)
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.target.rc
